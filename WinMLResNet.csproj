@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <WindowsSdkPackageVersion>10.0.22621.52</WindowsSdkPackageVersion>
+    <RootNamespace>WinMLResNet</RootNamespace>
+    <AssemblyName>AT-WinML-Benchmark-Sample</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <WindowsPackageType>None</WindowsPackageType>
+    <EnableMsixTooling>false</EnableMsixTooling>
+    <GeneratePriFile>false</GeneratePriFile>
+    <DisableMrtCodeGen>true</DisableMrtCodeGen>
+    <EnableCoreMrtTooling>false</EnableCoreMrtTooling>
+    <ApplicationIcon>Assets\app-icon.ico</ApplicationIcon>
+    <WasdkPkgVer>2.0.1</WasdkPkgVer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\**" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Cert/EG models can be multiple GB (external-data ONNX). Don't duplicate them into bin on
+         every build; the app discovers them from the source Assets folder at runtime. -->
+    <Content Remove="Assets\certification-models\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Keep the folder present in source control layout but out of the build copy. -->
+    <None Include="Assets\certification-models\**" />
+  </ItemGroup>
+
+  <!-- Exclude the CompileErrorTest sub-project from this project's compilation -->
+  <ItemGroup>
+    <Compile Remove="CompileErrorTest\**" />
+    <Content Remove="CompileErrorTest\**" />
+    <None Remove="CompileErrorTest\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="$(WasdkPkgVer)" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.ML" Version="2.0.300" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4654" />
+    <PackageReference Include="System.Numerics.Tensors" Version="10.0.5" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" Version="1.0.2" />
+  </ItemGroup>
+
+  <!-- In WASDK 2.0+, native DLLs are auto-deployed via NuGet runtimes/ for self-contained builds -->
+</Project>

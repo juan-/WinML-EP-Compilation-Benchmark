@@ -1,0 +1,29 @@
+# Build outputs
+bin/
+obj/
+
+# MCP server settings (contains org-specific config)
+.vscode/mcp.json
+
+# Bug bash internal tracking
+BugBash-Issues.md
+
+# Large ONNX model (download separately)
+Assets/*.onnx
+
+# Certification / Evergreen models (exported locally via the winml CLI; can be several GB each)
+Assets/certification-models/
+
+# Generated PRI/resource files
+*.pri
+*.pri.xml
+apppri.xml
+priconfig.xml
+priDump.xml
+
+# VS solution user files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/

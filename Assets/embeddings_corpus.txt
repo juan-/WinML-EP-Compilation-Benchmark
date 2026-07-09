@@ -1,0 +1,199 @@
+I'd like a medium hot latte with oat milk.
+Can I get a large iced caramel macchiato, please?
+A small cappuccino with an extra shot of espresso.
+Make it a venti vanilla cold brew, no ice.
+I'll have a decaf americano, black.
+One mocha with whipped cream and chocolate drizzle.
+Just a single shot of espresso in a small cup.
+A double shot of ristretto, please.
+Can I get an iced flat white?
+I'd like a hot drip coffee in the largest size.
+A pour-over with the single-origin Ethiopian beans.
+Make it a tall cortado.
+A medium iced latte with vanilla syrup.
+A large hot caramel latte, extra hot.
+A small mocha with whole milk and no whipped cream.
+An iced americano with a splash of cream.
+A nitro cold brew, large size.
+A medium iced coffee, sweetened.
+A medium hot matcha latte with almond milk.
+A medium hot matcha latte with soy milk.
+A large iced matcha latte with oat milk and no sugar.
+Can I get an iced matcha latte, no sugar?
+I'd like a hot matcha tea, just water and matcha.
+A matcha frappe, blended with ice.
+I'd like a hot chai latte with oat milk.
+An iced chai latte with soy milk.
+A dirty chai with a shot of espresso, please.
+A large hot chocolate with extra whipped cream.
+A small hot chocolate with marshmallows.
+Can I get a London fog with vanilla?
+An iced London fog with lavender syrup.
+I'd like a hibiscus iced tea, unsweetened.
+A green tea, hot, large size.
+An Earl Grey tea, hot.
+A peach iced tea with light ice.
+Can I get a fresh-squeezed orange juice?
+A bottled sparkling water, please.
+Just a regular bottled water.
+A lemonade, large size.
+I'd like a strawberry banana smoothie.
+Make me a vanilla bean frappe with extra ice.
+A mango fruit smoothie, no dairy.
+A kids hot cocoa, not too hot.
+A kids size apple juice.
+A steamed milk with vanilla syrup, no caffeine.
+Add a pump of hazelnut syrup to my coffee.
+Add a pump of caramel to it.
+Two pumps of vanilla syrup, please.
+Switch the whole milk to almond milk, please.
+Use soy milk instead of regular milk.
+Can I have it with coconut milk?
+Make it with skim milk, please.
+Use 2 percent milk for the latte.
+Lactose-free milk, please.
+Can you make that sugar-free?
+Use sugar-free vanilla syrup instead.
+No sugar, please — unsweetened.
+Just one pump of sweetener.
+A little extra sweet, please.
+I want it extra hot.
+Make it lukewarm, my kid will drink it.
+Less ice, please.
+Light ice in the iced drink.
+No ice at all in the cold brew.
+Hold the foam on the cappuccino.
+Extra foam, please.
+Add an extra espresso shot to my drink.
+Add two extra espresso shots, please.
+Half-caff, please — one regular shot and one decaf.
+Can you make it half-sweet?
+Make it dairy-free overall.
+Hold the whipped cream.
+Extra whipped cream, please.
+No drizzle on top.
+Do you have any non-dairy milk options?
+What kinds of milk alternatives do you offer?
+What's in a flat white?
+Is the seasonal pumpkin spice latte still available?
+Do you have any seasonal drinks right now?
+Do you offer any sugar-free flavor syrups?
+What's the difference between a latte and a cappuccino?
+What's the difference between a macchiato and a latte?
+How much caffeine is in a single shot of espresso?
+Does the matcha have caffeine?
+Is the chai latte made with real tea?
+Are your drinks gluten-free?
+Do you have any vegan options on the menu?
+Can I add an extra espresso shot to a drink?
+What sizes do your drinks come in?
+What's your strongest coffee drink?
+Do you have any decaf options?
+What's the cheapest drink on the menu?
+I'd like a blueberry muffin with my drink.
+A banana nut muffin, warmed up.
+A bran muffin, please.
+Add a chocolate croissant to the order.
+Can I get an almond croissant, warmed up?
+A plain butter croissant, please.
+A ham and cheese croissant.
+I'd like a banana nut bread slice.
+Add a lemon poppyseed loaf, please.
+A pumpkin loaf slice.
+Can I get a cinnamon roll, heated?
+A glazed donut, please.
+Two oatmeal raisin cookies, please.
+I'd like a chocolate chip cookie.
+A double chocolate cookie.
+A snickerdoodle cookie.
+A slice of carrot cake.
+A slice of cheesecake.
+Add a brownie to the order.
+A blondie, please.
+A scone, the cranberry orange one.
+A blueberry scone, warmed.
+Do you have any gluten-free pastries?
+Are any of your pastries vegan?
+I'd like a bagel with cream cheese.
+Make it an everything bagel, toasted.
+A plain bagel with butter.
+A cinnamon raisin bagel toasted, with cream cheese.
+A sesame bagel with avocado spread.
+A breakfast sandwich, please.
+The bacon, egg, and cheese on a biscuit.
+A sausage and egg sandwich on an English muffin.
+A spinach and feta wrap, breakfast option.
+A vegetarian breakfast sandwich without meat.
+Add a turkey and cheese sandwich.
+I'd like the chicken pesto panini.
+A grilled veggie wrap, please.
+The avocado toast, with everything.
+A caprese sandwich on focaccia.
+A ham and Swiss sandwich on rye.
+A tuna salad sandwich on whole wheat.
+A BLT on sourdough.
+A grilled cheese sandwich.
+Do you have any vegetarian sandwich options?
+Do you have any vegan sandwiches?
+Is there a kids menu?
+A cup of tomato soup with a side of bread.
+A bowl of tomato soup, please.
+The chicken noodle soup, large size.
+A bowl of butternut squash soup, please.
+A small lentil soup.
+A cup of broccoli cheddar soup.
+What's today's soup of the day?
+A garden salad with vinaigrette on the side.
+The Caesar salad, no croutons.
+A kale and quinoa salad.
+A Cobb salad, dressing on the side.
+Can I get the soup-and-half-sandwich combo?
+Pair the tomato soup with the grilled cheese, please.
+A fruit cup with my breakfast sandwich.
+Can I add a side of yogurt and granola?
+A protein box, please.
+I'd like a hard-boiled egg snack.
+A bag of potato chips on the side.
+A small fruit and cheese plate.
+A trail mix snack pack.
+I'd like to pay with a credit card.
+Can I use Apple Pay?
+Can I pay with Google Pay?
+Cash payment, please.
+I have a rewards card to scan.
+I'd like to redeem my free drink reward.
+Can I use my points for a pastry?
+Add a tip of two dollars.
+Add a 20 percent tip.
+This is for here, not to go.
+I'd like that to go, please.
+Can you put it in a reusable cup I brought?
+Can I borrow a ceramic mug for here?
+I need a tray for four drinks.
+Can I add a cup sleeve, it's hot.
+Can I get extra napkins?
+Do you have a stamp card I can use?
+Where is the nearest store to me?
+What time do you close today?
+What time do you open in the morning?
+Are you open on holidays?
+Do you have free Wi-Fi in the cafe?
+Where can I plug in my laptop?
+Is there a drive-thru at this location?
+Do you have outdoor seating?
+Is the cafe pet-friendly?
+I'd like to cancel my last order.
+There's a mistake in my drink, can I get it remade?
+My drink is too sweet, can you fix it?
+This sandwich was supposed to be heated up.
+My order is missing an item.
+I want to modify the order I just placed.
+Can I substitute the bagel for a croissant?
+Where can I find the bathroom?
+Do you have a loyalty program I can sign up for?
+Can I order ahead through the app?
+Can I order delivery instead of picking up?
+Do you sell gift cards?
+Can I buy a bag of whole bean coffee to take home?
+Do you sell ground coffee for home brewing?
+Do you carry any branded merchandise like mugs?
