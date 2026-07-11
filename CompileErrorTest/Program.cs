@@ -233,7 +233,7 @@ static async Task RunProbeAsync(string[] args)
     var ortEnv = OrtEnv.Instance();
     Console.WriteLine("OrtEnv created.");
 
-    Console.WriteLine("\n--- Registering all installed EPs (catalog FindAllProviders + EnsureReadyAsync + TryRegister) ---");
+    Console.WriteLine("\n--- Registering all installed EPs (package extensions + AddPackageDependency + RegisterExecutionProviderLibrary) ---");
     var infos = await EpRegistration.RegisterAllAsync();
     Console.WriteLine($"{"ProviderName",-34} {"Registered",-11} {"PackageFamily",-52} Notes");
     Console.WriteLine(new string('-', 130));

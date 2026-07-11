@@ -18,10 +18,11 @@
     <PackageReference Include="Microsoft.WindowsAppSDK.ML" Version="2.0.300" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4654" />
   </ItemGroup>
-  <!-- Share the EP registration logic with the main app so both use the exact same
-       FindAllProviders + TryRegister path. -->
+  <!-- Share the EP discovery + registration logic with the main app so both use the exact same
+       package-extension enumeration + AddPackageDependency + RegisterExecutionProviderLibrary path. -->
   <ItemGroup>
     <Compile Include="..\EpRegistration.cs" Link="EpRegistration.cs" />
+    <Compile Include="..\PackageDependency.cs" Link="PackageDependency.cs" />
   </ItemGroup>
   <!-- In WASDK 2.0+, native DLLs (onnxruntime.dll, WinML projection) auto-deploy via NuGet runtimes/ for self-contained builds -->
 </Project>
