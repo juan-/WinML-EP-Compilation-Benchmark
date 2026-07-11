@@ -126,6 +126,12 @@ public static class EpRegistration
                 info.Error = depError is null ? null : $"AddPackageDependency: {depError}";
             }
 
+            // Step 2b: add the provider DLL's own folder to the loader search path. Some vendor EPs
+            // ship their private runtime DLLs (e.g. cudart64_12.dll for NVIDIA TensorRT, ryzen_mm.dll
+            // for AMD Ryzen) alongside the provider DLL; ORT's default search dirs don't include the
+            // DLL's own directory, so those siblings must be made discoverable explicitly.
+            PackageDependency.AddSearchDirectory(Path.GetDirectoryName(cand.LibraryPath));
+
             // Step 3: register the provider library with ONNX Runtime.
             try
             {

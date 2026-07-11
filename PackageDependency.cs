@@ -83,6 +83,31 @@ public static class PackageDependency
     [DllImport("kernel32.dll")]
     private static extern bool HeapFree(IntPtr heap, uint flags, IntPtr mem);
 
+    // Adds a directory to the process DLL search path (contributes to LOAD_LIBRARY_SEARCH_USER_DIRS,
+    // itself part of LOAD_LIBRARY_SEARCH_DEFAULT_DIRS). Returns an opaque cookie or NULL on failure.
+    [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+    private static extern IntPtr AddDllDirectory(string newDirectory);
+
+    private static readonly HashSet<string> s_dllDirs = new(StringComparer.OrdinalIgnoreCase);
+
+    /// <summary>
+    /// Adds <paramref name="directory"/> to the process DLL search path so a vendor EP DLL's sibling
+    /// dependencies that live in the *same* folder (e.g. <c>cudart64_12.dll</c> next to the NVIDIA
+    /// TensorRT EP, or <c>ryzen_mm.dll</c> next to the AMD Ryzen EP) resolve when ONNX Runtime loads
+    /// the provider library. Mirrors the runtime's use of <c>LOAD_LIBRARY_SEARCH_DLL_LOAD_DIR</c>.
+    /// Idempotent per directory; failures are non-fatal.
+    /// </summary>
+    public static void AddSearchDirectory(string? directory)
+    {
+        if (string.IsNullOrWhiteSpace(directory) || !Directory.Exists(directory)) return;
+        var full = Path.GetFullPath(directory);
+        lock (s_lock)
+        {
+            if (!s_dllDirs.Add(full)) return;
+        }
+        try { AddDllDirectory(full); } catch { /* non-fatal */ }
+    }
+
     private static ProcessorArchitectures CurrentArchitecture => RuntimeInformation.ProcessArchitecture switch
     {
         Architecture.Arm64 => ProcessorArchitectures.Arm64,

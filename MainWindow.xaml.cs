@@ -651,10 +651,43 @@ public sealed partial class MainWindow : Window
                 {
                     Provider = info.Provider,
                     Status = "✗ Not loaded",
-                    Detail = string.IsNullOrEmpty(info.Error) ? "provider library did not load" : info.Error!
+                    Detail = InterpretEpLoadError(info.Error)
                 });
             }
         }
+    }
+
+    /// <summary>
+    /// Translates a raw ONNX Runtime provider-load error into a plain-language explanation. After
+    /// the package-graph + DLL-search-directory resolution, a remaining load failure means the EP's
+    /// hardware runtime/driver simply isn't present on this machine (or the DLL targets a different
+    /// CPU architecture), not that the tool failed to find the shipped EP files.
+    /// </summary>
+    private static string InterpretEpLoadError(string? error)
+    {
+        if (string.IsNullOrEmpty(error)) return "provider library did not load";
+
+        // Architecture mismatch — e.g. an ARM64 QNN provider DLL on an x64 host.
+        if (error.Contains("not a valid Win32 application", StringComparison.OrdinalIgnoreCase))
+            return "provider DLL targets a different CPU architecture (not loadable on this host) — " + error;
+
+        // Missing vendor runtime/driver DLLs (present only when the accelerator + driver are installed).
+        var vendorDlls = new (string Dll, string Runtime)[]
+        {
+            ("cudart64",       "NVIDIA CUDA runtime / GPU driver"),
+            ("nvcuda",         "NVIDIA GPU driver"),
+            ("xrt_coreutil",   "AMD XRT / Ryzen AI NPU runtime"),
+            ("ryzen_mm",       "AMD Ryzen AI NPU runtime"),
+            ("QnnHtp",         "Qualcomm QNN runtime"),
+            ("migraphx",       "AMD ROCm / MIGraphX runtime"),
+        };
+        foreach (var (dll, runtime) in vendorDlls)
+        {
+            if (error.Contains(dll, StringComparison.OrdinalIgnoreCase))
+                return $"requires {runtime} (not installed on this machine) — {error}";
+        }
+
+        return error;
     }
 
     private async void OnCompileAddFile(object sender, RoutedEventArgs e)
